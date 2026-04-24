@@ -20,7 +20,7 @@ const Contents = () => {
           CULTURAL ESSAYS
         </NavLink>
       </div>
-      <div className="w-full border-b-3 border-[#2a2a2a] mt-1.5 sm:mt-2 md:mt-0" />
+      <div className="w-full border-b-3 border-[#2a2a2a] " />
     </div>
   );
 };
