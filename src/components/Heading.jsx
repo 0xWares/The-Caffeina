@@ -9,6 +9,7 @@ const Heading = () => {
       <h4 className="text-xl sm:text-2xl md:text-3xl text-[#9FA09C] mt-3 sm:mt-4">
         A quiet archive of coffee, culture and thought.
       </h4>
+      
     </div>
   );
 };

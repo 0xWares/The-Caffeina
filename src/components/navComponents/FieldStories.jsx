@@ -2,6 +2,7 @@ import React from 'react';
 import Story from './subComponents/Story';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import ActionBar from './subComponents/ActionBar';
 
 const FieldStories = () => {
   const FieldStory = [
@@ -11,60 +12,70 @@ const FieldStories = () => {
       description: "He wakes before sunrise, but has never tasted the final cup.",
       location: "Bandarban",
       author: "The Caffeina Field Team",
-      date: "April 10, 2026"
-    },
-    {
-      img: "https://images.unsplash.com/photo-1493925410384-84f842e616fb?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Nurturing Coffee: A Look into Sustainable Practices",
-      description: "A farmer's methodical approach amidst the lush foothills of Chittagong.",
-      location: "Chittagong",
-      author: "Rahman, M.",
-      date: "March 3, 2026"
+      date: "April 2026"
     },
     {
       img: "https://plus.unsplash.com/premium_photo-1724820187104-fd02d2b27cfc?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "A Day in the Life of a Bangladeshi Coffee Harvester",
-      description: "She carries baskets of crimson cherries with quiet pride.",
+      description: "She picks the cherries under the shade of towering trees.",
       location: "Sylhet",
       author: "The Caffeina Field Team",
-      date: "January 20, 2026"
+      date: "January 2026"
+    },
+    {
+      img: "https://images.unsplash.com/photo-1493925410384-84f842e616fb?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Harvest Season in the Hills of Rangamati",
+      description: "A farmer's methodical approach amidst the lush foothills.",
+      location: "Rangamati",
+      author: "Rahman, M.",
+      date: "September 2025"
+    },
+    {
+      img: "https://images.unsplash.com/photo-1493925410384-84f842e616fb?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Harvest Season in the Hills of Rangamati",
+      description: "A farmer's methodical approach amidst the lush foothills.",
+      location: "Rangamati",
+      author: "Rahman, M.",
+      date: "September 2025"
     }
   ];
 
+  const [featured, ...rest] = FieldStory;
+
   return (
-    <div className="px-5 py-8 sm:px-8 sm:py-12 md:px-20 md:py-20 flex flex-col justify-center">
-      <p className="text-[#91908F] font-bold text-xs sm:text-sm mb-2 sm:mb-4">
+    <div className="px-4 py-8 sm:px-8 sm:py-12 md:px-16 md:py-16 lg:px-20 lg:py-20 flex flex-col">
+
+      <p className="text-[#91908F] font-bold text-xs sm:text-sm mb-2 sm:mb-3">
         FIELD STORIES
       </p>
-      <h3 className="text-[#EEEBE6] text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-5 md:mb-7">
+      <h3 className="text-[#EEEBE6] text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-4 md:mb-5">
         Voices from the origin
       </h3>
-      <p className="text-[#706E6F] text-sm sm:text-base mb-8 sm:mb-12 md:mb-15">
+      <p className="text-[#706E6F] text-sm sm:text-base mb-5 sm:mb-8 md:mb-10">
         Human stories collected from the heart of Bangladesh coffee farming
       </p>
 
-      <div className="space-y-4 sm:space-y-5">
-        {FieldStory.map((story, id) => (
-          <Story
-            key={id}
-            img={story.img}
-            title={story.title}
-            description={story.description}
-            location={story.location}
-            author={story.author}
-            date={story.date}
-          />
+      <ActionBar />
+
+      {/* Featured */}
+      <p className="text-[#91908F] font-bold text-xs tracking-widest mt-6 mb-3">
+        FEATURED STORY
+      </p>
+      <Story {...featured} featured />
+
+      {/* Rest — 1 col on mobile, 2 col on sm+ */}
+      <p className="text-[#91908F] font-bold text-xs tracking-widest mt-8 sm:mt-10 mb-4">
+        ALL FIELD STORIES
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+        {rest.map((story, id) => (
+          <Story key={id} {...story} />
         ))}
       </div>
 
-      <button className="mx-auto w-full sm:w-8/12 md:w-7/12 mt-8 sm:mt-10 flex flex-row justify-center border border-[#2a2826] items-center text-[#A9A09B] text-base sm:text-lg md:text-xl gap-4 sm:gap-6 rounded-md py-2 sm:py-1 px-4 transition-colors hover:bg-[#1c1a19]">
+      <button className="cursor-pointer mx-auto w-full sm:w-10/12 md:w-8/12 lg:w-7/12 mt-8 sm:mt-10 flex flex-row justify-center border border-[#2a2826] items-center text-[#A9A09B] text-base sm:text-lg md:text-xl gap-3 sm:gap-5 rounded-md py-2.5 px-4 hover:bg-[#1c1a19] transition-colors duration-300">
         View all field stories
-        <span>
-          <FontAwesomeIcon
-            className="w-4 h-4 sm:w-5 sm:h-5 text-[#948471]"
-            icon={faArrowRight}
-          />
-        </span>
+        <FontAwesomeIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[#948471]" icon={faArrowRight} />
       </button>
     </div>
   );

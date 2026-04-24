@@ -25,7 +25,8 @@ const CulturalEssays = () => {
       author: "Hasan, M.",
       year: 2026,
       cta: "Read Essay"
-    }
+    },
+    
   ];
 
   return (
@@ -53,7 +54,7 @@ const CulturalEssays = () => {
         ))}
       </div>
 
-      <button className="mx-auto w-full sm:w-8/12 md:w-7/12 mt-8 sm:mt-10 flex flex-row justify-center border border-[#2a2826] items-center text-[#A9A09B] text-base sm:text-lg md:text-xl gap-4 sm:gap-6 rounded-md py-2 sm:py-1 px-4 transition-colors hover:bg-[#1c1a19]">
+      <button className="transition-transform duration-300 hover:scale-101 mx-auto w-full sm:w-8/12 md:w-7/12 mt-8 sm:mt-10 flex flex-row justify-center border border-[#2a2826] items-center text-[#A9A09B] text-base sm:text-lg md:text-xl gap-4 sm:gap-6 rounded-md py-2 sm:py-1 px-4  hover:bg-[#1c1a19]">
         View all field stories
         <span>
           <FontAwesomeIcon
