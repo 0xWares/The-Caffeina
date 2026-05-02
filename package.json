@@ -31,5 +31,18 @@
     "gh-pages": "^6.3.0",
     "globals": "^17.4.0",
     "vite": "^8.0.4"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xWares/The-Caffeina.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0xWares/The-Caffeina/issues"
+  },
+  "homepage": "https://github.com/0xWares/The-Caffeina#readme"
 }
