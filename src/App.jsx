@@ -1,6 +1,4 @@
 import React from 'react'
-// import Home from './components/pages/Home'
-// import Contact from './components/pages/Contact'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import CaffeinaJournal from './components/pages/CaffeinaJournal'
 import Contents from './components/Contents'
@@ -9,6 +7,7 @@ import ResearchPapers from './components/navComponents/ResearchPapers'
 import FieldStories from './components/navComponents/FieldStories'
 import AllResearchPapers from './components/navComponents/allPapers/AllResearchPapers'
 import AllFieldStories from './components/navComponents/allStories/AllFieldStories'
+import AllCulturalEssays from './components/navComponents/allEssays/AllCulturalEssays'
 
 const App = () => {
   return (
@@ -22,6 +21,7 @@ const App = () => {
         </Route>
         <Route path='/all-research-papers' element={<AllResearchPapers/>}/>
         <Route path='/all-field-story' element={<AllFieldStories/>}/>
+        <Route path="/all-cultural-essays" element={<AllCulturalEssays/>}/>
       </Routes>
     </div>
   )

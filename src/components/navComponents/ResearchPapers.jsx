@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Paper from './subComponents/Paper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -7,10 +7,14 @@ import ActionBar from './subComponents/ActionBar';
 import { Link } from 'react-router-dom';
 
 const ResearchPapers = () => {
+    const [selectedPaper, setSelectedPaper] = useState(null);
+  
   const papers = [
     {
       type: "Research Paper",
       title: "The Evolution of Coffee Culture in Urban Dhaka",
+      pera: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas natus exercitationem illo! Dicta voluptatem officia neque porro quia iste vero similique delectus distinctio? Nihil quaerat esse officiis repellendus at placeat tempora iste reprehenderit impedit amet? Ipsum vitae officia autem dolores architecto? Dolore officia libero dolorem reiciendis culpa, et excepturi ea deserunt nesciunt quos voluptate repudiandae! Aliquid maxime neque porro a consectetur modi placeat doloremque esse debitis temporibus, aperiam adipisci est ut doloribus saepe nulla corrupti tempora officia, illum iste nam reiciendis magnam? Natus mollitia libero possimus excepturi molestias, quasi dolorum sit ipsam reprehenderit sunt consequuntur quod doloribus? Beatae harum, quod debitis est magnam voluptatem esse qui ad placeat iure molestiae. Temporibus omnis cumque, atque libero tempora consequuntur quasi aut quas facere molestias, delectus quisquam! Sunt voluptas magnam id error modi vel ipsum dicta tempora natus sapiente labore quaerat eius omnis, est similique magni maxime cum dolor aliquam at non accusamus consectetur quia! Nemo aliquam officiis, quae cum neque eos repellat nobis qui quibusdam quas assumenda, quo, cumque reiciendis expedita eligendi saepe magnam? Minima, quidem! Optio nulla dolore quam obcaecati quos voluptates culpa assumenda, magni voluptatem vel, incidunt fugit consectetur consequatur asperiores ex saepe deleniti itaque in dolores quibusdam fuga alias ipsam debitis! Voluptatem nostrum quaerat error earum dicta nemo incidunt sint dolor ipsa beatae. Nihil amet praesentium sit blanditiis tempore suscipit voluptas, incidunt nisi veniam totam officia, quas maiores et quos ipsum quia cum, aperiam laboriosam provident pariatur sint quibusdam. Sequi, in! Adipisci beatae esse voluptate quaerat dolores. Cupiditate voluptatibus magni corporis tenetur sapiente quia amet excepturi quae voluptatem dolore eligendi accusamus officia natus, mollitia expedita in repellat, beatae aliquam neque assumenda illo temporibus. Doloremque, ipsa tempora. Laboriosam dolore, nemo ab aperiam laudantium amet reiciendis cum temporibus nostrum quisquam maiores expedita libero ipsum id. Praesentium harum nobis dolorum quasi aut itaque quidem est explicabo, tempora vero veniam deleniti asperiores sit placeat alias odio perferendis possimus enim nemo voluptatum! Sapiente, in similique. Corporis excepturi quaerat vero modi saepe nulla molestiae blanditiis atque fugit itaque unde quod sit odio vitae quae ut corrupti eaque assumenda voluptas ipsam reiciendis placeat repellendus, ab fugiat. Harum recusandae iure nobis veritatis, quod laboriosam ad quia adipisci odio quam repellendus impedit fugit necessitatibus soluta, fugiat enim molestiae minima culpa esse similique autem rem vitae accusantium. Numquam amet provident voluptates earum. Sint neque dolore culpa, maxime temporibus expedita perspiciatis ullam magnam non quos harum molestias modi quae sit aliquam facilis fuga quia voluptatem quod tempore distinctio dolor veniam. Quis fugit a commodi officia voluptatibus impedit tempore cupiditate amet totam. Non mollitia, eligendi rem explicabo ipsum tenetur numquam ad soluta quidem voluptates iste vero porro architecto maiores! Obcaecati ex corrupti alias maiores ipsa provident, debitis ad autem adipisci quasi? Impedit explicabo hic labore ipsam culpa obcaecati facilis, consequuntur, commodi quidem odit, sit optio doloremque. Est corrupti illo provident dolores! Error suscipit dolor possimus aperiam accusantium laboriosam soluta sit pariatur vitae doloribus molestias quo repudiandae est sapiente quasi ea reprehenderit, rerum repellendus nihil. Odit provident explicabo consectetur doloribus soluta fugit?",
+
       author: "Rahman, S.",
       readTime: "8 min read",
       year: 2026
@@ -18,6 +22,8 @@ const ResearchPapers = () => {
     {
       type: "Research Paper",
       title: "Caffeine Consumption Patterns of Young Professionals",
+      pera: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas natus exercitationem illo! Dicta voluptatem officia neque porro quia iste vero similique delectus distinctio? Nihil quaerat esse officiis repellendus at placeat tempora iste reprehenderit impedit amet? Ipsum vitae officia autem dolores architecto? Dolore officia libero dolorem reiciendis culpa, et excepturi ea deserunt nesciunt quos voluptate repudiandae! Aliquid maxime neque porro a consectetur modi placeat doloremque esse debitis temporibus, aperiam adipisci est ut doloribus saepe nulla corrupti tempora officia, illum iste nam reiciendis magnam? Natus mollitia libero possimus excepturi molestias, quasi dolorum sit ipsam reprehenderit sunt consequuntur quod doloribus? Beatae harum, quod debitis est magnam voluptatem esse qui ad placeat iure molestiae. Temporibus omnis cumque, atque libero tempora consequuntur quasi aut quas facere molestias, delectus quisquam! Sunt voluptas magnam id error modi vel ipsum dicta tempora natus sapiente labore quaerat eius omnis, est similique magni maxime cum dolor aliquam at non accusamus consectetur quia! Nemo aliquam officiis, quae cum neque eos repellat nobis qui quibusdam quas assumenda, quo, cumque reiciendis expedita eligendi saepe magnam? Minima, quidem! Optio nulla dolore quam obcaecati quos voluptates culpa assumenda, magni voluptatem vel, incidunt fugit consectetur consequatur asperiores ex saepe deleniti itaque in dolores quibusdam fuga alias ipsam debitis! Voluptatem nostrum quaerat error earum dicta nemo incidunt sint dolor ipsa beatae. Nihil amet praesentium sit blanditiis tempore suscipit voluptas, incidunt nisi veniam totam officia, quas maiores et quos ipsum quia cum, aperiam laboriosam provident pariatur sint quibusdam. Sequi, in! Adipisci beatae esse voluptate quaerat dolores. Cupiditate voluptatibus magni corporis tenetur sapiente quia amet excepturi quae voluptatem dolore eligendi accusamus officia natus, mollitia expedita in repellat, beatae aliquam neque assumenda illo temporibus. Doloremque, ipsa tempora. Laboriosam dolore, nemo ab aperiam laudantium amet reiciendis cum temporibus nostrum quisquam maiores expedita libero ipsum id. Praesentium harum nobis dolorum quasi aut itaque quidem est explicabo, tempora vero veniam deleniti asperiores sit placeat alias odio perferendis possimus enim nemo voluptatum! Sapiente, in similique. Corporis excepturi quaerat vero modi saepe nulla molestiae blanditiis atque fugit itaque unde quod sit odio vitae quae ut corrupti eaque assumenda voluptas ipsam reiciendis placeat repellendus, ab fugiat. Harum recusandae iure nobis veritatis, quod laboriosam ad quia adipisci odio quam repellendus impedit fugit necessitatibus soluta, fugiat enim molestiae minima culpa esse similique autem rem vitae accusantium. Numquam amet provident voluptates earum. Sint neque dolore culpa, maxime temporibus expedita perspiciatis ullam magnam non quos harum molestias modi quae sit aliquam facilis fuga quia voluptatem quod tempore distinctio dolor veniam. Quis fugit a commodi officia voluptatibus impedit tempore cupiditate amet totam. Non mollitia, eligendi rem explicabo ipsum tenetur numquam ad soluta quidem voluptates iste vero porro architecto maiores! Obcaecati ex corrupti alias maiores ipsa provident, debitis ad autem adipisci quasi? Impedit explicabo hic labore ipsam culpa obcaecati facilis, consequuntur, commodi quidem odit, sit optio doloremque. Est corrupti illo provident dolores! Error suscipit dolor possimus aperiam accusantium laboriosam soluta sit pariatur vitae doloribus molestias quo repudiandae est sapiente quasi ea reprehenderit, rerum repellendus nihil. Odit provident explicabo consectetur doloribus soluta fugit?",
+
       author: "Hasan, M.",
       readTime: "10 min read",
       year: 2026
@@ -25,6 +31,8 @@ const ResearchPapers = () => {
     {
       type: "Research Paper",
       title: "The Economics of Coffee Farming in Bangladesh",
+
+      
       author: "Alam, R.",
       readTime: "12 min read",
       year: 2025
@@ -47,8 +55,9 @@ const ResearchPapers = () => {
 
       <div className="space-y-3 sm:space-y-4">
         {papers.map((paper, id) => (
-          <Paper
-            key={id}
+          <div key={id} onClick={() => setSelectedPaper(paper)} >
+            <Paper
+            
             title={paper.title}
             // description={paper.description}
             author={paper.author}
@@ -57,6 +66,7 @@ const ResearchPapers = () => {
             year={paper.year}
             
           />
+          </div>
         ))}
       </div>
 
@@ -69,6 +79,49 @@ const ResearchPapers = () => {
           />
         </span>
       </Link>
+
+
+
+      {selectedPaper && (
+  <div
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
+    onClick={() => setSelectedPaper(null)}  
+  >
+    
+    <div
+      className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#171516] border border-[#2a2826] rounded-2xl p-5 sm:p-6 md:p-8relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#171516] border border-[#2a2826] rounded-2xl p-5 sm:p-6 md:p-8 max-h-[90vh] overflow-y-auto no-scrollbar"
+      onClick={(e) => e.stopPropagation()}  
+    >
+
+      {/* Close Button */}
+      <button
+        onClick={() => setSelectedPaper(null)}
+        className="absolute top-4 right-4 text-[#A0928B] hover:text-white text-xl cursor-pointer"
+      >
+        ✕
+      </button>
+
+      {/* Content */}
+      <p className="text-[#887F79] text-xs sm:text-sm mb-2">
+        RESEARCH PAPER
+      </p>
+
+      <h2 className="text-[#EEEBE6] text-2xl sm:text-3xl mb-4">
+        {selectedPaper.title}
+      </h2>
+
+      
+      <p className='text-[#726E6B] text-sm sm:text-base mb-6 text-justify'>{selectedPaper.pera}</p>
+
+      <div className="flex gap-2 text-xs sm:text-sm text-[#828081]">
+        <span>{selectedPaper.author}</span>
+        <span>•</span>
+        <span>{selectedPaper.year}</span>
+      </div>
+
+    </div>
+  </div>
+)}
     </div>
   );
 };
