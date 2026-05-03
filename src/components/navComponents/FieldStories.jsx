@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 const FieldStories = () => {
   const FieldStory = [
     {
+      img: "https://plus.unsplash.com/premium_photo-1724820187988-1c01f8a9b289?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
       title: "The Journey of a Coffee Bean: A Farmer's Tale",
       description: "He wakes before sunrise, but has never tasted the final cup.",
       location: "Bandarban",
@@ -15,6 +17,8 @@ const FieldStories = () => {
       date: "April 2026"
     },
     {
+      img: "https://plus.unsplash.com/premium_photo-1724820187104-fd02d2b27cfc?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
       title: "A Day in the Life of a Bangladeshi Coffee Harvester",
       description: "She picks the cherries under the shade of towering trees.",
       location: "Sylhet",
@@ -22,6 +26,8 @@ const FieldStories = () => {
       date: "January 2026"
     },
     {
+      img: "https://images.unsplash.com/photo-1493925410384-84f842e616fb?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
       title: "Harvest Season in the Hills of Rangamati",
       description: "A farmer's methodical approach amidst the lush foothills.",
       location: "Rangamati",
@@ -29,6 +35,8 @@ const FieldStories = () => {
       date: "September 2025"
     },
     {
+      img: "https://images.unsplash.com/photo-1493925410384-84f842e616fb?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
       title: "Harvest Season in the Hills of Rangamati",
       description: "A farmer's methodical approach amidst the lush foothills.",
       location: "Rangamati",
@@ -60,7 +68,7 @@ const FieldStories = () => {
       </p>
       <div className="flex flex-col gap-4">
         {FieldStory.map((story, id) => (
-          <Story key={id} title={story.title} description={story.description} location={story.location} author={story.author} date={story.date}/>
+          <Story key={id} img={story.img} title={story.title} description={story.description} location={story.location} author={story.author} date={story.date}/>
         ))}
       </div>
 
